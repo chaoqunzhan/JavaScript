@@ -1,0 +1,28 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing:border-box;
+}
+
+#display{
+	width:800px;
+	height:450px;
+	border:1px solid #808080;
+	margin:0 auto;
+	overflow:hidden;
+	position:relative;
+}
+
+#display img{
+	position:absolute;
+}
+
+
+
+#move{
+	width:20px;
+	height:20px;
+	background-color:#789;
+	/*margin:0 auto;*/
+	position:relative;
+	
+}
