@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLISH>
+<head>
+<title>打印日历</title>
+<script type="text/javascript" src="print_the_calendar.js"></script>
+<link rel="stylesheet" href="print_the_calendar.css" type="text/css">
+<meta content="text/html; charset=utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+	var currDate=new Date();           //创建一个表示当前系统时间的Date对象实例
+	var currYear=currDate.getFullYear();  //currDate调用getFullYear()方法获取年的信息，返回的4位整数
+	var currMonth=currDate.getMonth()+1;  //currDate调用getMonth()方法获取月的信息，返回0表示1月，11表示12月
+	var defaultVal=currYear+"-"+currMonth;
+	var rq=prompt("请输入年月（格式为：2017-11）：",defaultVal);//prompt()用于打开输入对话框，为用户提供一个简单的输入界面,defaultVal是表示默认值，就是当前的实际年月
+	var yearAndMonth=rq.split("-");      //用于把字符串分割成字符串数组
+	var year=parseInt(yearAndMonth[0]);   //parseInt用于获取参数字符串表示的整数
+	var month=parseInt(yearAndMonth[1])-1;
+	printCalendar(year,month);
+	</script>
+</body>
+</html>

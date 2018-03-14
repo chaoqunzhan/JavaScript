@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLISH>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8">
+	<title>您度过的日夜</title>
+	<script type="text/javascript" src="the_day_of_you.js"></script>
+	<link rel="stylesheet" href="the_day_of_you.css" type="text/css">
+</head>
+<body>
+	<script type="text/javascript">
+	var currDate=new Date();           //创建一个表示当前系统时间的Date对象实例
+	var currYear=currDate.getFullYear();  //currDate调用getFullYear()方法获取年的信息，返回的4位整数
+	var currMonth=currDate.getMonth()+1;  //currDate调用getMonth()方法获取月的信息，返回0表示1月，11表示12月
+	var currDay=currDate.getDay();
+	var defaultVal=1994+"-"+08+"-"+07;
+	var rq=prompt("请输入年月日（格式为：2017-11-1）：",defaultVal);/*prompt()用于打开输入对话框，为用户提供一个
+	                                                                  简单的输入界面,defaultVal是表示默认值，就是当前的实际年月*/
+	var yearAndMonth=rq.split("-");      //用于把字符串分割成字符串数组
+	var year=parseInt(yearAndMonth[0]);   //parseInt用于获取参数字符串表示的整数
+	var month=parseInt(yearAndMonth[1]);
+	var day=parseInt(yearAndMonth[2]);
+	// document.write("输入时间：</br>"+year+"</br>"+month+"</br>"+day+"</br>"+"当前时间：</br>"+currYear+"</br>"+currMonth+"</br>"+currDay);
+	calAllDay(year,month,day,currYear,currMonth,currDay);
+	</script>
+</body>
+</html>

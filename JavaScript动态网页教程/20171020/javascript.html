@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC>
+<html>
+	<head>
+		<meta charset="utf-8"> 
+		<title>java script text</title>
+		<script type="text/javascript" src="task.js"></script>
+		<link href="style.css"  rel="stylesheet" type="text/css" />
+	</head>
+	
+	<body>
+		<div id="text">
+			<p>2.1.4 请输入象棋和扑克总数和人数：</p>
+			<input type="text" id="xqpk">
+			<input type="text" id="renshu">
+			<input type="button" value="扑克和象棋有多少？" onclick="subtOnClick2141()"></br>
+		</div>
+
+		<div id="text">
+			<p>2.3.4 请输入你的成绩：</p>
+			<input type="text" id="chengji">
+			<input type="button" value="成绩优秀吗？" onclick="subtOnClick234()"> 
+		</div>
+
+		<div id="text">
+			<p>2.4.3 请输入三角形的三条边长：</p>
+			<input type="text" id="sideA">
+			<input type="text" id="sideB">
+			<input type="text" id="sideC">
+			<input type="button" value="三条边能不能构成三角形？" onclick="subtOnClick243()">
+		</div>
+
+		<div id="text">
+			<p>2.5 对象：</p>
+			<script type="text/javascript">
+					var subtOnClick251=new subtOnClick25(20,30,10);
+					var area=subtOnClick251.getarea();
+					document.write("top="+subtOnClick251.top+"<br/>");
+					document.write("bottom="+subtOnClick251.bottom+"<br/>");
+					document.write("height="+subtOnClick251.height+"<br/>");
+					document.write("area="+subtOnClick251.getarea+"<br/>");
+			</script>
+		</div>
+
+		<div id="text">
+			<p>3.4 位运算符</p>
+			<input type="button" value="显示实例" onclick="subtOnClick34()">
+		</div>	
+
+		<div id="text">
+			<p>3.5 其他运算符</p>
+			<script type="text/javascript">
+			var obj=new Rectangle(12,23);
+			var area1=computerArea(obj);
+			var obj=new Circle(25);
+			var area2=computerArea(obj);
+			var str=area1>area2?"第一个图形的面积大":"第二个图形的面积大";
+			document.write("<br/>"+str);
+			</script>
+		</div>	
+		
+		<div id="text">
+			<p>3.6 判断年月</p>
+			<input type="text" id="year">
+			<input type="text" id="month">
+			<input type="button" value="判断年月" onclick="dayNum()">
+		</div>
+
+		<div id="text">
+			<p>3.7 斐波那契数列</p>
+			<input type="text" id="n">
+			<input type="button" value="数列的前n项和" onclick="fibSum()">
+			<input type="text" id="n1">
+			<input type="button" value="显示数列的前n项" onclick="printFib()">
+		</div>
+	</body>
+</html>
