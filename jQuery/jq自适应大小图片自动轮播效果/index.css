@@ -1,0 +1,156 @@
+@charset"utf-8";
+*{
+  margin:0;padding:0;
+  box-sizing:border-box;
+}
+#one{               
+  background: url(https://raw.githubusercontent.com/chaoqunzhan/learngit/master/html/images/index-bg.jpg) center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  width:100%;
+  height:2600px; 
+  top:0; 
+ /* border:1px solid #000;*/             
+}
+
+.title{
+  width:383px;
+  height:101px;
+  /*background:url(https://raw.githubusercontent.com/chaoqunzhan/learngit/master/images/W.png);*/
+  background-size:cover;
+  float:left;
+}
+.btx li {
+  padding:5% 20px 0 20px; 
+  list-style-type : none;    
+  float:left;   
+  height:100%;               
+}
+
+.btx a {
+  font-size:20px;
+  text-decoration:none;
+  position:relative;
+  top: 0;
+  color:#FFF;     
+  transition:all .4s;
+}
+
+.btx li:hover a {
+  top:-20px;
+  color:#4eacff;
+  background-color:#808080;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.7);
+  transition: all .4s;
+}
+#bonner_top{
+  width:100%;
+  height:4px;
+  background-color:#fff;
+}
+#bonner_bottom{
+  width:100%;
+  height:4px;
+  background-color:#fff;
+}
+#bodyPage{ 
+  width:100%; 
+  /*border:1px solid #000;*/
+}
+img.bg { 
+  position:absolute; 
+  z-index:0; 
+  display:none;
+}
+
+img.prev {
+  position:absolute;
+  left:30px;
+  /*margin:50 50 50 50;*/
+  float:left;
+  opacity:0.2; 
+}
+img.next {
+  position:absolute;
+  right:30px;
+  float:right;
+  opacity:0.2; 
+}
+
+/**************************************pc版***********************************************/
+/****************************************导航栏****************************************************、*/
+@media screen and (min-width:1048px){
+.header{
+  width:100%;
+  height:101px;
+  /*background-color:#808090;*/
+}
+.btx{
+  width:100%;
+  height:101px;
+}
+
+img.bg { 
+  width:100%;
+}
+
+}
+
+@media screen and (max-width:1047px) and (min-width:767px) {
+.header{
+  width:100%;
+  height:191px;
+}
+.btx{
+  width:100%;
+  height:90px;
+  clear:both;
+}
+
+img.bg { 
+  width:100%;
+}
+}
+
+@media screen and (max-width:766px){
+.header{
+  width:360px;
+  height:241px;
+}
+.btx{
+  width:100%;
+  height:70px;
+  clear:both;
+}
+
+img.bg { 
+  width:100%;
+}
+}
+
+
+@media screen and (max-width:384px){
+.header{
+  width:360px;
+  height:241px;
+}
+.btx{
+  width:100%;
+  height:70px;
+  clear:both;
+}
+
+img.bg { 
+  width:384px;
+}
+#bonner_top{
+  width:384px;
+  height:4px;
+  background-color:#808080;
+}
+#bonner_bottom{
+  width:384px;
+  height:4px;
+  background-color:#808080;
+}
+}

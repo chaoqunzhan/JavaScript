@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC>
+<head>
+<meta content="width=device-width,user-scalable=yes" name="viewport"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱玩的电科郎</title>
+<link href="index.css"  rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body id="one">
+<div class="header">
+  <div class="title">
+    <img src="https://raw.githubusercontent.com/chaoqunzhan/learngit/master/images/W.png" alt="" >
+  </div>
+  <div class="btx"> 
+    <li><a href="index.html">首页</a></li>        
+    <li><a href="about_me.html">个人介绍</a></li>       
+    <li><a href="young.html">青春记录</a></li>     
+    <li><a href="rm.html">我执纯白</a></li>     
+    <li><a href="adobe.html">阿逗比</a></li>       
+    <li><a href="cqz21_liuyan/add.php">留言板</a></li>
+  </div>   
+</div>
+<div id="bonner_top"></div>
+<div id="bodyPage">
+  <img src="images/bg1.jpg" class="bg">
+  <img src="images/bg2.jpg" class="bg">
+  <img src="images/bg3.jpg" class="bg"> 
+  <a href="#"><img src="images/prev.png" class="prev"/></a>
+  <a href="#"><img src="images/next.png" class="next"/></a>
+</div>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    
+   $("#bodyPage").fullImages({
+     ImgWidth: 1920,
+     ImgHeight: 980,
+     autoplay : 5500,
+     fadeTime : 1000,
+   });
+});
+</script>
+<div id="bonner_bottom"></div>
+</body>
+</html>
