@@ -8,6 +8,7 @@
     background:url("background.jpg");
     background-repeat:no-repeat;
     background-size:cover;
+    overflow:hidden;
 }
 
 .contral{
@@ -43,11 +44,11 @@ button{
 }
 
 .show-box{
-    position:absolute;
+    position:relative;
     float:left;
     width:1000px;
     height:600px;
-    border:1px solid #234;
+    /*border:1px solid #234;*/
     /*background-color:#285;*/
     /*opacity:0.2;*/
 }
@@ -61,8 +62,9 @@ button{
 
 .well-box{
     width:1000px;
+    position:absolute;
     height:200px;
-    border:1px solid #789;
+    /*border:1px solid #789;*/
    /* background-color:#222;*/
 }
 
@@ -71,15 +73,25 @@ button{
     height:200px;
     float:left;
     background-color:#564;
-    position:relative;
+    position:absolute;
 }
 
 
 .bang{
     width:0px;
-    height:5px;
+    height:1px;
     background-color:#808;
-    left:50px;
-    top:395px;
+    top:400px;
     position:relative;
+    transform-origin:left;
+    transform:rotate(-90deg);
+}
+
+.men{
+    width:20px;
+    height:50px;
+    background-color:#765;
+    position:absolute;
+    left:25px;
+    top:350px;
 }
