@@ -19,7 +19,6 @@ function arrayList(){
     var sleft=new Array(3);    //柱子位置设置
     for(var i=0;i<3;i++){
         w[i]=parseInt(Math.random()*200)+100;
-        //w[i]=100;
     }
     sleft[0]=w[0]+wh;
     sleft[1]=w[0]+w[1]+wh*2;
@@ -72,21 +71,51 @@ function f(w,sleft,i){
                         $(".show-box").animate({"left":-sleft[i]+"px"},1000,function(){
                             i++;
                             stop=true;
-                            f(w,sleft,i);
-                            if(i==3){
-                                alert("未完待续。。。")
-                            };
+                            f(w,sleft,i); 
                         });    
                     });    //人走，窗口动
                 }
                 else {
                     
-                    $(".men").animate({"left":bangH+bang_sleft+"px"},2500,function(){
-                        $(".men").animate({"top":"600px"},1000,function(){
-                            alert("点击刷新，重头再来");
-                        }) 
-                    });    //人掉下去
-                }
+                        //人掉下去
+                    function Print (ready) {
+    return new Promise ((resolve,reject)=>{
+        if(ready){
+            resolve("Hello World!");
+        }else{
+            reject("Good bye!");
+        }
+    });
+}
+
+function print1(){
+    var p = new Promise(function(resolve, reject){
+        $(".men").animate({"left":bangH+bang_sleft+"px"},2500)
+    });
+    return p;            
+}
+
+function print2(){
+    var p = new Promise(function(resolve, reject){
+        $(".men").animate({"top":"600px"},1000) 
+    });
+    return p;            
+}
+
+function print3(){
+    var p = new Promise(function(resolve, reject){
+        alert("failure")
+    });
+    return p;            
+}   
+
+                    Print(true)
+                    // .then(message=>{alert(message);})
+                    .then(print1())
+                    .then(print2())
+                    .then(print3())
+
+                }      
             },500)
         }    
     });
@@ -94,3 +123,12 @@ function f(w,sleft,i){
 
 
 
+
+
+// function next(){
+//     i++;
+//     f(w,sleft,i);
+//     if(i==3){
+//         alert("succeed")
+//     }
+// }
